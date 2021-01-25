@@ -1,6 +1,8 @@
 package com.shinemo.baas.openapi.demo.common;
 
 import okhttp3.OkHttpClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -10,6 +12,9 @@ import java.util.concurrent.TimeUnit;
  * Email: luc@shinemo.com
  */
 public class OKHttpClientFactory {
+
+    private static Logger LOG = LoggerFactory.getLogger("info.log");
+
 
     private static final OkHttpClient OK_HTTP_CLIENT = new OkHttpClient
             .Builder()
@@ -21,7 +26,7 @@ public class OKHttpClientFactory {
                 try {
                     return chain.proceed(chain.request());
                 } finally {
-                    LogFactory.info("Received response for {} in {} ms", chain.request().url(), TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start));
+                    LOG.info("Received response for {} in {} ms", chain.request().url(), TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - start));
                 }
             })
             .build();

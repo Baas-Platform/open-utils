@@ -20,12 +20,12 @@ public class Demo {
     /**
      * 开放平台提供，详细说明见文档
      */
-    private final static String APP_ID = "123";
+    private final static String APP_ID = "VphSlE9B";
 
     /**
      * 开放平台提供，详细说明见文档
      */
-    private final static String APP_SECRET = "456";
+    private final static String APP_SECRET = "HbU7KvreLBeZLlmE";
 
     /**
      * 请求基地址
@@ -36,8 +36,8 @@ public class Demo {
     public static void main(String[] args) {
         System.out.println(getMapHeaderWithGet());
         System.out.println(getMapHeaderWithPost(TestReqVo.builder().id(1L).build()));
-        String ssoToken = "";
-        getUserInfoBySsoToken(ssoToken);
+        String ssoToken = "debug";
+        System.out.println(getUserInfoBySsoToken(ssoToken));
     }
 
 
@@ -65,17 +65,16 @@ public class Demo {
     /**
      * SSOToken获取用户信息
      * <p>
-     * 测试
+     * 模拟
      *
      * @param ssoToken
      * @return
      */
-    static void getUserInfoBySsoToken(String ssoToken) {
+    static String getUserInfoBySsoToken(String ssoToken) {
         // 文档里面有提供
         String apiUrl = "/openapi-cgw/openapi-login/sso/getUserInfoByToken";
         String url = REQ_BASE_URL + apiUrl + "?ssoToken=" + ssoToken;
         Map<String, Object> headers = getMapHeaderWithGet();
-        String result = OkHttpUtils.syncHttps(url, "GET", headers, null, null);
-        System.out.println(result);
+        return OkHttpUtils.syncHttps(url, "GET", headers, null, null);
     }
 }

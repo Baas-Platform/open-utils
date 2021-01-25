@@ -37,7 +37,6 @@ public class ReqHeaderUtils {
     public static Map<String, Object> get(String appId, String appSecret, int bodyLength) {
         Map<String, Object> headers = new HashMap<>(4);
         long timestamp = System.currentTimeMillis();
-        System.out.println((String.format("openTimestamp: %s; bodyLength: %s; openAppId: %s; appSecret: %s", timestamp, bodyLength, appId, appSecret)));
         headers.put("openTimestamp", String.valueOf(timestamp));
         headers.put("openAppId", appId);
         String content = appId + timestamp + bodyLength;
