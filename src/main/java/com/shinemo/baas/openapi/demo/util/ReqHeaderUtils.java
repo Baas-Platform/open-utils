@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 请求header工具类
+ *
  * @date: 2021-01-21
  * @author: luchao
  * @email: luc@shinemo.com

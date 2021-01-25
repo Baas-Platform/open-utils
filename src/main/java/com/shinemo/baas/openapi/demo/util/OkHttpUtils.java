@@ -1,7 +1,7 @@
 package com.shinemo.baas.openapi.demo.util;
 
-import com.baas.openapi.client.common.factory.OKHttpClientFactory;
 import com.shinemo.baas.openapi.demo.common.ApiException;
+import com.shinemo.baas.openapi.demo.common.OKHttpClientFactory;
 import okhttp3.Call;
 import okhttp3.MediaType;
 import okhttp3.Request;
