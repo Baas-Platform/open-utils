@@ -73,7 +73,7 @@ public class Demo {
     static void getUserInfoBySsoToken(String ssoToken) {
         // 文档里面有提供
         String apiUrl = "/openapi-cgw/openapi-login/sso/getUserInfoByToken";
-        String url = REQ_BASE_URL + apiUrl;
+        String url = REQ_BASE_URL + apiUrl + "?ssoToken=" + ssoToken;
         Map<String, Object> headers = getMapHeaderWithGet();
         String result = OkHttpUtils.syncHttps(url, "GET", headers, null, null);
         System.out.println(result);
