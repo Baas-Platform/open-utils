@@ -4,6 +4,8 @@
               value="%date{yyyy-MM-dd HH:mm:ss} | %highlight(%-5level) | %X{traceId} | %boldYellow(%thread) | %boldGreen(%logger{36}) | %msg%n"/>
 
 
+    <property name="LOG_PATH" value="/data/logs/openapi-demo"/>
+
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder charset="UTF-8">
             <pattern>${LOG_PATTERN}</pattern>
