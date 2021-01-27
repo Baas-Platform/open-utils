@@ -20,27 +20,24 @@ public class Demo {
     /**
      * 开放平台提供，详细说明见文档
      */
-//    private final static String APP_ID = "VphSlE9B";
-    private final static String APP_ID = "AlQCsL5V";
+    private final static String APP_ID = "VphSlE9B";
 
 
     /**
      * 开放平台提供，详细说明见文档
      */
-//    private final static String APP_SECRET = "HbU7KvreLBeZLlmE";
-    private final static String APP_SECRET = "USmuTgBrzpc5Pbpk";
+    private final static String APP_SECRET = "HbU7KvreLBeZLlmE";
 
 
     /**
      * 请求基地址
      */
-//    private final static String REQ_BASE_URL = "http://10.0.17.200:21006";
-    private final static String REQ_BASE_URL = "http://59.36.10.215:41006/";
+    private final static String REQ_BASE_URL = "http://10.0.17.200:21006";
 
 
     public static void main(String[] args) {
-//        System.out.println(getMapHeaderWithGet());
-//        System.out.println(getMapHeaderWithPost(TestReqVo.builder().id(1L).build()));
+        System.out.println(getMapHeaderWithGet());
+        System.out.println(getMapHeaderWithPost(TestReqVo.builder().id(1L).build()));
         String ssoToken = "debug";
         System.out.println(getUserInfoBySsoToken(ssoToken));
     }
